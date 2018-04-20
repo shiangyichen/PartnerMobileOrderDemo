@@ -1,0 +1,11 @@
+framework module QLiEERMobileOrderSDK {
+  umbrella header "QLiEERMobileOrderSDK.h"
+
+  export *
+  module * { export * }
+}
+
+module QLiEERMobileOrderSDK.Swift {
+    header "QLiEERMobileOrderSDK-Swift.h"
+    requires objc
+}
