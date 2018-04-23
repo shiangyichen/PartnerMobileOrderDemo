@@ -16,8 +16,8 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         QLiEERMobileSDK.set(environment: .Stage)
-        if !QLiEERMobileSDK.checkTokenIsValid() {
-            QLiEERMobileSDK.launchMobileViewController(accessToken: "", mobileSDKDelegate: self, completion: { result, vc in
+//        if !QLiEERMobileSDK.checkTokenIsValid() {
+            QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjQzLCJleHAiOjE1MjQ0ODE0MjN9.VQhclBcLjJLGHZ0TCPenHAg16J8mPcpzHpPA6jrjhnM", mobileSDKDelegate: self, completion: { result, vc in
                 // 結果為0代表正常
                 if result == 0 {
                     // 呼叫 start 方法的目的是：當行動點餐的 ViewController 消失後，仍能透過 Delegate 取得訂單變化，要中止的話請使用 QLiEERMobileSDK.stop()
@@ -27,7 +27,7 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
                     print("登入有誤")
                 }
             })
-        }
+//        }
     }
     
     func unreadCountUpdated(latestNumber: Int) {
