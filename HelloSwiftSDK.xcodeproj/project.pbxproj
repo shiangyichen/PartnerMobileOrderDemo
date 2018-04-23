@@ -13,72 +13,72 @@
 		914ED3202088A20800F6C42D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914ED31F2088A20800F6C42D /* Assets.xcassets */; };
 		914ED3232088A20800F6C42D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914ED3212088A20800F6C42D /* LaunchScreen.storyboard */; };
 		914ED3262088A20800F6C42D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 914ED3252088A20800F6C42D /* main.m */; };
-		914ED32B2088A22B00F6C42D /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */; };
-		914ED32C2088A22D00F6C42D /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */; };
-		914ED32D2088A22D00F6C42D /* QLiEERMobileOrderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED3302088A23D00F6C42D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600B208874E50076318E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED3322088A23D00F6C42D /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91956009208874E50076318E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED3342088A23D00F6C42D /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600E208874E60076318E /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED3362088A23D00F6C42D /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600A208874E50076318E /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED3382088A23D00F6C42D /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600C208874E50076318E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED33A2088A23D00F6C42D /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91956008208874E50076318E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED33C2088A23D00F6C42D /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600F208874E60076318E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		914ED33E2088A23D00F6C42D /* Valet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600D208874E50076318E /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		91955FF5208874360076318E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91955FF4208874360076318E /* AppDelegate.swift */; };
 		91955FF7208874360076318E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91955FF6208874360076318E /* ViewController.swift */; };
 		91955FFA208874360076318E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91955FF8208874360076318E /* Main.storyboard */; };
 		91955FFC208874370076318E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91955FFB208874370076318E /* Assets.xcassets */; };
 		91955FFF208874370076318E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91955FFD208874370076318E /* LaunchScreen.storyboard */; };
-		91956011208874E60076318E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91956008208874E50076318E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91956013208874E60076318E /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91956009208874E50076318E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91956015208874E60076318E /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600A208874E50076318E /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91956017208874E60076318E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600B208874E50076318E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91956019208874E60076318E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600C208874E50076318E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9195601B208874E60076318E /* Valet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600D208874E50076318E /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9195601D208874E60076318E /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600E208874E60076318E /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9195601F208874E60076318E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9195600F208874E60076318E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		919560282088792D0076318E /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */; };
-		91956029208879470076318E /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */; };
-		9195602A208879470076318E /* QLiEERMobileOrderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A1099E208DD141003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
+		91A1099F208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
+		91A109A0208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109AA208DD174003FDF8C /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A1208DD173003FDF8C /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109AC208DD174003FDF8C /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A2208DD173003FDF8C /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109AE208DD174003FDF8C /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A3208DD173003FDF8C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109B0208DD174003FDF8C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A4208DD173003FDF8C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109B2208DD174003FDF8C /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A5208DD173003FDF8C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109B4208DD174003FDF8C /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A6208DD173003FDF8C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109B6208DD174003FDF8C /* Valet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A7208DD174003FDF8C /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109B8208DD174003FDF8C /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A109A8208DD174003FDF8C /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109BF208DD7E0003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
+		91A109C2208DD8EA003FDF8C /* Alamofire.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A4208DD173003FDF8C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109C4208DD8EA003FDF8C /* ObjectMapper.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A1208DD173003FDF8C /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109C6208DD8EA003FDF8C /* PKHUD.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A2208DD173003FDF8C /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109C8208DD8EA003FDF8C /* Reachability.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A8208DD174003FDF8C /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109CA208DD8EA003FDF8C /* Realm.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A6208DD173003FDF8C /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109CC208DD8EA003FDF8C /* RealmSwift.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A5208DD173003FDF8C /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109CE208DD8EA003FDF8C /* SwiftyJSON.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A3208DD173003FDF8C /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109D0208DD8EA003FDF8C /* Valet.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A109A7208DD174003FDF8C /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		91A109D4208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
+		91A109D5208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		914ED32E2088A22D00F6C42D /* Embed Frameworks */ = {
+		913304EB208D8DA20036BF7F /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				914ED33C2088A23D00F6C42D /* SwiftyJSON.framework in Embed Frameworks */,
-				914ED3382088A23D00F6C42D /* Realm.framework in Embed Frameworks */,
-				914ED3322088A23D00F6C42D /* ObjectMapper.framework in Embed Frameworks */,
-				914ED33A2088A23D00F6C42D /* RealmSwift.framework in Embed Frameworks */,
-				914ED32D2088A22D00F6C42D /* QLiEERMobileOrderSDK.framework in Embed Frameworks */,
-				914ED3362088A23D00F6C42D /* Reachability.framework in Embed Frameworks */,
-				914ED3302088A23D00F6C42D /* Alamofire.framework in Embed Frameworks */,
-				914ED3342088A23D00F6C42D /* PKHUD.framework in Embed Frameworks */,
-				914ED33E2088A23D00F6C42D /* Valet.framework in Embed Frameworks */,
+				91A109AE208DD174003FDF8C /* SwiftyJSON.framework in Embed Frameworks */,
+				91A109AC208DD174003FDF8C /* PKHUD.framework in Embed Frameworks */,
+				91A109B2208DD174003FDF8C /* RealmSwift.framework in Embed Frameworks */,
+				91A109AA208DD174003FDF8C /* ObjectMapper.framework in Embed Frameworks */,
+				91A109B8208DD174003FDF8C /* Reachability.framework in Embed Frameworks */,
+				91A109B4208DD174003FDF8C /* Realm.framework in Embed Frameworks */,
+				91A109B0208DD174003FDF8C /* Alamofire.framework in Embed Frameworks */,
+				91A109A0208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Frameworks */,
+				91A109B6208DD174003FDF8C /* Valet.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		91956020208874E60076318E /* Embed Frameworks */ = {
+		91AA4625208DC1DF00A8C671 /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9195601F208874E60076318E /* SwiftyJSON.framework in Embed Frameworks */,
-				91956013208874E60076318E /* ObjectMapper.framework in Embed Frameworks */,
-				91956015208874E60076318E /* Reachability.framework in Embed Frameworks */,
-				91956011208874E60076318E /* RealmSwift.framework in Embed Frameworks */,
-				91956017208874E60076318E /* Alamofire.framework in Embed Frameworks */,
-				91956019208874E60076318E /* Realm.framework in Embed Frameworks */,
-				9195602A208879470076318E /* QLiEERMobileOrderSDK.framework in Embed Frameworks */,
-				9195601B208874E60076318E /* Valet.framework in Embed Frameworks */,
-				9195601D208874E60076318E /* PKHUD.framework in Embed Frameworks */,
+				91A109CE208DD8EA003FDF8C /* SwiftyJSON.framework in Embed Libraries */,
+				91A109CA208DD8EA003FDF8C /* Realm.framework in Embed Libraries */,
+				91A109C4208DD8EA003FDF8C /* ObjectMapper.framework in Embed Libraries */,
+				91A109CC208DD8EA003FDF8C /* RealmSwift.framework in Embed Libraries */,
+				91A109C8208DD8EA003FDF8C /* Reachability.framework in Embed Libraries */,
+				91A109C2208DD8EA003FDF8C /* Alamofire.framework in Embed Libraries */,
+				91A109D5208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Libraries */,
+				91A109C6208DD8EA003FDF8C /* PKHUD.framework in Embed Libraries */,
+				91A109D0208DD8EA003FDF8C /* Valet.framework in Embed Libraries */,
 			);
-			name = "Embed Frameworks";
+			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -101,15 +101,15 @@
 		91955FFB208874370076318E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91955FFE208874370076318E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91956000208874370076318E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		91956008208874E50076318E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		91956009208874E50076318E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		9195600A208874E50076318E /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
-		9195600B208874E50076318E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		9195600C208874E50076318E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		9195600D208874E50076318E /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Valet.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/Valet.framework; sourceTree = "<group>"; };
-		9195600E208874E60076318E /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/PKHUD.framework; sourceTree = "<group>"; };
-		9195600F208874E60076318E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = ../../Documents/QLiEER/QLiEERMobileOrderSDK/Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QLiEERMobileOrderSDK.framework; path = "../../../Library/Developer/Xcode/DerivedData/QLiEERMobileOrderSDK-hktsedphumhbuxhbauktexkqwzui/Build/Products/Debug-iphoneos/QLiEERMobileOrderSDK.framework"; sourceTree = "<group>"; };
+		91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QLiEERMobileOrderSDK.framework; sourceTree = "<group>"; };
+		91A109A1208DD173003FDF8C /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/ObjectMapper.framework; sourceTree = "<group>"; };
+		91A109A2208DD173003FDF8C /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/PKHUD.framework; sourceTree = "<group>"; };
+		91A109A3208DD173003FDF8C /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/SwiftyJSON.framework; sourceTree = "<group>"; };
+		91A109A4208DD173003FDF8C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Alamofire.framework; sourceTree = "<group>"; };
+		91A109A5208DD173003FDF8C /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/RealmSwift.framework; sourceTree = "<group>"; };
+		91A109A6208DD173003FDF8C /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Realm.framework; sourceTree = "<group>"; };
+		91A109A7208DD174003FDF8C /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Valet.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Valet.framework; sourceTree = "<group>"; };
+		91A109A8208DD174003FDF8C /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Reachability.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				914ED32C2088A22D00F6C42D /* QLiEERMobileOrderSDK.framework in Frameworks */,
-				914ED32B2088A22B00F6C42D /* QLiEERMobileOrderSDK.framework in Frameworks */,
+				91A1099F208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */,
+				91A1099E208DD141003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91956029208879470076318E /* QLiEERMobileOrderSDK.framework in Frameworks */,
-				919560282088792D0076318E /* QLiEERMobileOrderSDK.framework in Frameworks */,
+				91A109D4208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */,
+				91A109BF208DD7E0003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,14 +160,14 @@
 		91955FE8208874360076318E = {
 			isa = PBXGroup;
 			children = (
-				9195600B208874E50076318E /* Alamofire.framework */,
-				91956009208874E50076318E /* ObjectMapper.framework */,
-				9195600E208874E60076318E /* PKHUD.framework */,
-				9195600A208874E50076318E /* Reachability.framework */,
-				9195600C208874E50076318E /* Realm.framework */,
-				91956008208874E50076318E /* RealmSwift.framework */,
-				9195600F208874E60076318E /* SwiftyJSON.framework */,
-				9195600D208874E50076318E /* Valet.framework */,
+				91A109A4208DD173003FDF8C /* Alamofire.framework */,
+				91A109A1208DD173003FDF8C /* ObjectMapper.framework */,
+				91A109A2208DD173003FDF8C /* PKHUD.framework */,
+				91A109A8208DD174003FDF8C /* Reachability.framework */,
+				91A109A6208DD173003FDF8C /* Realm.framework */,
+				91A109A5208DD173003FDF8C /* RealmSwift.framework */,
+				91A109A3208DD173003FDF8C /* SwiftyJSON.framework */,
+				91A109A7208DD174003FDF8C /* Valet.framework */,
 				91955FF3208874360076318E /* HelloSwiftSDK */,
 				914ED3152088A20700F6C42D /* OCSDK */,
 				91955FF2208874360076318E /* Products */,
@@ -187,7 +187,7 @@
 		91955FF3208874360076318E /* HelloSwiftSDK */ = {
 			isa = PBXGroup;
 			children = (
-				919560272088792D0076318E /* QLiEERMobileOrderSDK.framework */,
+				91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */,
 				91955FF4208874360076318E /* AppDelegate.swift */,
 				91955FF6208874360076318E /* ViewController.swift */,
 				91955FF8208874360076318E /* Main.storyboard */,
@@ -208,7 +208,7 @@
 				914ED3102088A20700F6C42D /* Sources */,
 				914ED3112088A20700F6C42D /* Frameworks */,
 				914ED3122088A20700F6C42D /* Resources */,
-				914ED32E2088A22D00F6C42D /* Embed Frameworks */,
+				913304EB208D8DA20036BF7F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -226,7 +226,7 @@
 				91955FED208874360076318E /* Sources */,
 				91955FEE208874360076318E /* Frameworks */,
 				91955FEF208874360076318E /* Resources */,
-				91956020208874E60076318E /* Embed Frameworks */,
+				91AA4625208DC1DF00A8C671 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -364,10 +364,13 @@
 				DEVELOPMENT_TEAM = C3M8X2J4Y3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HelloSwiftSDK",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OCSDK",
+					"$(PROJECT_DIR)/HelloSwiftSDK",
+					"$(PROJECT_DIR)/HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks",
 				);
 				INFOPLIST_FILE = OCSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,10 +390,13 @@
 				DEVELOPMENT_TEAM = C3M8X2J4Y3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HelloSwiftSDK",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/OCSDK",
+					"$(PROJECT_DIR)/HelloSwiftSDK",
+					"$(PROJECT_DIR)/HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks",
 				);
 				INFOPLIST_FILE = OCSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +458,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -506,7 +512,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -523,10 +529,12 @@
 				DEVELOPMENT_TEAM = C3M8X2J4Y3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HelloSwiftSDK",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HelloSwiftSDK",
+					"$(PROJECT_DIR)/HelloSwiftSDK/iOS",
 				);
 				INFOPLIST_FILE = HelloSwiftSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -546,10 +554,12 @@
 				DEVELOPMENT_TEAM = C3M8X2J4Y3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/HelloSwiftSDK",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HelloSwiftSDK",
+					"$(PROJECT_DIR)/HelloSwiftSDK/iOS",
 				);
 				INFOPLIST_FILE = HelloSwiftSDK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

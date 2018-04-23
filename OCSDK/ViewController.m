@@ -18,9 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [QLiEERMobileSDK launchMobileViewControllerWithAccessToken:@"" mobileSDKDelegate:self completion:^(NSInteger a, UIViewController * _Nullable b) {
-        //
-    }];
+    
+}
+    
+
+-(void)viewDidAppear:(BOOL)animated {
+    [QLiEERMobileSDK setWithEnvironment:EnvironmentStage];
+    if (![QLiEERMobileSDK checkTokenIsValid]) {
+        [QLiEERMobileSDK launchMobileViewControllerWithAccessToken:@"" mobileSDKDelegate:self completion:^(NSInteger result, UIViewController * _Nullable vc) {
+            // 結果為0代表正常
+            if (result == 0) {
+                // 呼叫 start 方法的目的是：當行動點餐的 ViewController 消失後，仍能透過 Delegate 取得訂單變化，要中止的話請使用 [QLiEERMobileSDK stop]
+                [QLiEERMobileSDK start];
+                [self presentViewController:vc animated:YES completion:nil];
+            }
+        }];
+    }
 }
 
 -(void)orderWillChangeInAction:(NSString *)inAction sourceView:(UIView *)sourceView {
