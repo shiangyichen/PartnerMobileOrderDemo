@@ -1,5 +1,8 @@
 # PartnerMobileOrderDemo
 
+# API 文件
+http://petstore.swagger.io/?url=https://s3-ap-northeast-1.amazonaws.com/qlieer-file-storage/swagger.yaml
+
 # 請打開相機權限描述
 Info.plist 的 NSCameraDescriptionUsage 請記得填寫，用途是掃描 QRCode 取餐時會開啟
 
