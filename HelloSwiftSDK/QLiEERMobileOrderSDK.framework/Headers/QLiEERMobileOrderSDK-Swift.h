@@ -165,6 +165,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import Foundation;
+@import RealmSwift;
 @import ObjectiveC;
 #endif
 
@@ -233,13 +234,13 @@ typedef SWIFT_ENUM(NSInteger, Environment) {
 
 SWIFT_CLASS("_TtC20QLiEERMobileOrderSDK15QLiEERMobileSDK")
 @interface QLiEERMobileSDK : NSObject
+/// 目前的未讀訂單數量
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger unreadCount;)
++ (NSInteger)unreadCount SWIFT_WARN_UNUSED_RESULT;
++ (void)setUnreadCount:(NSInteger)value;
 /// 設定SDK運行伺服器
 /// 測試時請代入 Stage
 + (void)setWithEnvironment:(enum Environment)environment;
-/// 開始觀察訂單數，目前設定為每 20 秒 pulling 一次
-+ (void)start;
-/// 停止觀察訂單數
-+ (void)stop;
 /// 檢查目前token是否有效
 /// true: 有效，不必傳access token直接開啟行動點餐頁面
 /// false: 無效，開啟行動點餐時需帶有效的access token
@@ -251,11 +252,29 @@ SWIFT_CLASS("_TtC20QLiEERMobileOrderSDK15QLiEERMobileSDK")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC20QLiEERMobileOrderSDK24QLiEERMobileSDKConstants")
+@interface QLiEERMobileSDKConstants : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageNew;)
++ (NSString * _Nonnull)kPageNew SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageDoing;)
++ (NSString * _Nonnull)kPageDoing SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageAwait;)
++ (NSString * _Nonnull)kPageAwait SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageCompletion;)
++ (NSString * _Nonnull)kPageCompletion SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kTitleKey;)
++ (NSString * _Nonnull)kTitleKey SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kDateKey;)
++ (NSString * _Nonnull)kDateKey SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class UIView;
 
 SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 @protocol QLiEERMobileSDKDelegate <NSObject>
-- (void)orderWillChangeInAction:(NSString * _Nonnull)inAction sourceView:(UIView * _Nonnull)sourceView;
+- (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
 - (void)unreadCountUpdatedWithLatestNumber:(NSInteger)latestNumber;
 @end
 

@@ -24,20 +24,25 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [QLiEERMobileSDK setWithEnvironment:EnvironmentStage];
-//    if (![QLiEERMobileSDK checkTokenIsValid]) {
+    if (![QLiEERMobileSDK checkTokenIsValid]) {
         [QLiEERMobileSDK launchMobileViewControllerWithAccessToken:@"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjg2LCJleHAiOjE1MjQ0ODE0NjZ9.hMzRqIEjmajAZvU3nE7g2dTyGtQrygSnYvi4ok4a140" mobileSDKDelegate:self completion:^(NSInteger result, UIViewController * _Nullable vc) {
             // 結果為0代表正常
             if (result == 0) {
-                // 呼叫 start 方法的目的是：當行動點餐的 ViewController 消失後，仍能透過 Delegate 取得訂單變化，要中止的話請使用 [QLiEERMobileSDK stop]
-                [QLiEERMobileSDK start];
                 [self presentViewController:vc animated:YES completion:nil];
             }
         }];
-//    }
+    }
 }
 
--(void)orderWillChangeInAction:(NSString *)inAction sourceView:(UIView *)sourceView {
-    //
+- (void)orderWillChangeWithOrderID:(NSString *)orderID inAction:(NSInteger)inAction sourceView:(UIView *)sourceView callback:(void (^)(BOOL))callback {
+    
+    //如果要允許 order 可以操作變化，請送：
+    callback(YES);
+    
+}
+
+-(void)unreadCountUpdatedWithLatestNumber:(NSInteger)latestNumber {
+    // 每次更新行動點餐的訂單數量時，都會呼叫
 }
 
 

@@ -20,8 +20,6 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
             QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjQzLCJleHAiOjE1MjQ0ODE0MjN9.VQhclBcLjJLGHZ0TCPenHAg16J8mPcpzHpPA6jrjhnM", mobileSDKDelegate: self, completion: { result, vc in
                 // 結果為0代表正常
                 if result == 0 {
-                    // 呼叫 start 方法的目的是：當行動點餐的 ViewController 消失後，仍能透過 Delegate 取得訂單變化，要中止的話請使用 QLiEERMobileSDK.stop()
-                    QLiEERMobileSDK.start()
                     self.present(vc!, animated: true, completion: nil)
                 }else{
                     print("登入有誤")
@@ -30,12 +28,13 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
 //        }
     }
     
-    func unreadCountUpdated(latestNumber: Int) {
-        //
+    func orderWillChange(orderID: String, inAction: Int, sourceView: UIView, callback: ((Bool) -> ())) {
+        //如果要允許 order 可以操作變化，請送：
+        callback(true)
     }
     
-    func orderWillChange(inAction: String, sourceView: UIView) {
-        //
+    func unreadCountUpdated(latestNumber: Int) {
+        // 每次更新行動點餐的訂單數量時，都會呼叫
     }
 
     override func didReceiveMemoryWarning() {
