@@ -13,35 +13,23 @@ import Foundation
     func unreadCountUpdated(latestNumber: Int)
 }
 
-@objc public class QLiEERMobileSDKConstants: NSObject {
-    @objc public static let kPageNew = "kPageNew"
-    @objc public static let kPageDoing = "kPageDoing"
-    @objc public static let kPageAwait = "kPageAwait"
-    @objc public static let kPageCompletion = "kPageCompletion"
-    @objc public static let kTitleKey = "kTitleKey"
-    @objc public static let kDateKey = "kDateKey"
-//    static let kTitleValueName = \RLM_Order.customer?.name
-//    static let kTitleValuePhone = \RLM_Order.customer?.mobile
-//    static let kDateValueCreateTime = \RLM_Order.createTime
-//    static let kDateValueReservationTime = \RLM_Order.reservationTime
-//    static let kDateValueDoingTime = \RLM_Order.doingTime
-//    static let kDateValueAwaitTime = \RLM_Order.awaitTime
-//    static let kDateValueCompletionTime = \RLM_Order.completedTime
-//    @objc public static let kTitleValueName = "name"
-//    @objc public static let kTitleValuePhone = "phone"
-//    @objc public static let kDateValueCreateTime = "createTime"
-//    @objc public static let kDateValueReservationTime = "reservationTime"
-//    @objc public static let kDateValueDoingTime = "doingTime"
-//    @objc public static let kDateValueAwaitTime = "awaitTime"
-//    @objc public static let kDateValueCompletionTime = "completionTime"
-
-}
+//@objc public class QLiEERMobileSDKConstants: NSObject {
+//    @objc public static let kPageNew = "kPageNew"
+//    @objc public static let kPageDoing = "kPageDoing"
+//    @objc public static let kPageAwait = "kPageAwait"
+//    @objc public static let kPageCompletion = "kPageCompletion"
+//    @objc public static let kTitleKey = "kTitleKey"
+//    @objc public static let kDateKey = "kDateKey"
+//}
 
 @objc public class QLiEERMobileSDK: NSObject{
     
     @objc static var delegate: QLiEERMobileSDKDelegate?
     
 //    @objc static public var pageSettings: [String:[String:String]]?
+    
+    // 這個是專門 pulling 新訂單的 controller，讓外部 SDK 可以在背景時仍 pulling 新訂單
+    static internal let backgroundPreorderController = PreOrderController(status: .new)
     
     /// 目前的未讀訂單數量
     @objc static public var unreadCount = 0
@@ -50,6 +38,14 @@ import Foundation
     /// 測試時請代入 Stage
     @objc static public func set(environment: Environment) {
         Environment.current = environment
+    }
+    
+    @objc static public func start() {
+        backgroundPreorderController.startObserving()
+    }
+    
+    @objc static public func stop() {
+        backgroundPreorderController.stopObserving()
     }
 
     /// 檢查目前token是否有效
@@ -69,7 +65,6 @@ import Foundation
                                                   completion:@escaping ((Int, UIViewController?)->())){
         let mobileStoryboard = UIStoryboard (name: "MobileOrder", bundle: Bundle(for: MobileOrderSplitViewController.self))
         let vc = mobileStoryboard.instantiateInitialViewController() as! MobileOrderSplitViewController
-//        vc.setDelegate(delegate: mobileSDKDelegate)
         self.delegate = mobileSDKDelegate
         if let token = accessToken{
             loginWithAccessToken(token, completion:{ result in

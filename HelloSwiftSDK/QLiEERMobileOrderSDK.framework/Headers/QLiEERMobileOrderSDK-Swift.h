@@ -241,6 +241,8 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger unreadCount;)
 /// 設定SDK運行伺服器
 /// 測試時請代入 Stage
 + (void)setWithEnvironment:(enum Environment)environment;
++ (void)start;
++ (void)stop;
 /// 檢查目前token是否有效
 /// true: 有效，不必傳access token直接開啟行動點餐頁面
 /// false: 無效，開啟行動點餐時需帶有效的access token
@@ -249,24 +251,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger unreadCount;)
 /// token是否有效
 + (BOOL)checkTokenIsValid SWIFT_WARN_UNUSED_RESULT;
 + (void)launchMobileViewControllerWithAccessToken:(NSString * _Nullable)accessToken mobileSDKDelegate:(id <QLiEERMobileSDKDelegate> _Nonnull)mobileSDKDelegate completion:(void (^ _Nonnull)(NSInteger, UIViewController * _Nullable))completion;
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC20QLiEERMobileOrderSDK24QLiEERMobileSDKConstants")
-@interface QLiEERMobileSDKConstants : NSObject
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageNew;)
-+ (NSString * _Nonnull)kPageNew SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageDoing;)
-+ (NSString * _Nonnull)kPageDoing SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageAwait;)
-+ (NSString * _Nonnull)kPageAwait SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kPageCompletion;)
-+ (NSString * _Nonnull)kPageCompletion SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kTitleKey;)
-+ (NSString * _Nonnull)kTitleKey SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, copy) NSString * _Nonnull kDateKey;)
-+ (NSString * _Nonnull)kDateKey SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

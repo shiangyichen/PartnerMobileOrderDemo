@@ -28,6 +28,7 @@
         [QLiEERMobileSDK launchMobileViewControllerWithAccessToken:@"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjg2LCJleHAiOjE1MjQ0ODE0NjZ9.hMzRqIEjmajAZvU3nE7g2dTyGtQrygSnYvi4ok4a140" mobileSDKDelegate:self completion:^(NSInteger result, UIViewController * _Nullable vc) {
             // 結果為0代表正常
             if (result == 0) {
+                [QLiEERMobileSDK start];
                 [self presentViewController:vc animated:YES completion:nil];
             }
         }];

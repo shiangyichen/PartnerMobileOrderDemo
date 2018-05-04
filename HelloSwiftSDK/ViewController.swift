@@ -20,6 +20,7 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
             QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjQzLCJleHAiOjE1MjQ0ODE0MjN9.VQhclBcLjJLGHZ0TCPenHAg16J8mPcpzHpPA6jrjhnM", mobileSDKDelegate: self, completion: { result, vc in
                 // 結果為0代表正常
                 if result == 0 {
+                    QLiEERMobileSDK.start()
                     self.present(vc!, animated: true, completion: nil)
                 }else{
                     print("登入有誤")
