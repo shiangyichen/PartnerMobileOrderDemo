@@ -10,6 +10,7 @@ import UIKit
 import QLiEERMobileOrderSDK
 
 class ViewController: UIViewController, QLiEERMobileSDKDelegate {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +18,7 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         QLiEERMobileSDK.set(environment: .Stage)
 //        if !QLiEERMobileSDK.checkTokenIsValid() {
-            QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjQzLCJleHAiOjE1MjQ0ODE0MjN9.VQhclBcLjJLGHZ0TCPenHAg16J8mPcpzHpPA6jrjhnM", mobileSDKDelegate: self, completion: { result, vc in
+        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjQzLCJleHAiOjE1MjQ0ODE0MjN9.VQhclBcLjJLGHZ0TCPenHAg16J8mPcpzHpPA6jrjhnM", withCancelBtn: true, mobileSDKDelegate: self, completion: { result, vc in
                 // 結果為0代表正常
                 if result == 0 {
                     QLiEERMobileSDK.start()
@@ -38,6 +39,11 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
         // 每次更新行動點餐的訂單數量時，都會呼叫
     }
 
+    
+    func tokenInvalid() {
+        // token失效後，需重新launch並塞入新的token
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
