@@ -250,7 +250,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger unreadCount;)
 /// returns:
 /// token是否有效
 + (BOOL)checkTokenIsValid SWIFT_WARN_UNUSED_RESULT;
-+ (void)launchMobileViewControllerWithAccessToken:(NSString * _Nullable)accessToken mobileSDKDelegate:(id <QLiEERMobileSDKDelegate> _Nonnull)mobileSDKDelegate completion:(void (^ _Nonnull)(NSInteger, UIViewController * _Nullable))completion;
++ (void)launchMobileViewControllerWithAccessToken:(NSString * _Nullable)accessToken withCancelBtn:(BOOL)withCancelBtn mobileSDKDelegate:(id <QLiEERMobileSDKDelegate> _Nonnull)mobileSDKDelegate completion:(void (^ _Nonnull)(NSInteger, UIViewController * _Nullable))completion;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -260,6 +260,7 @@ SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 @protocol QLiEERMobileSDKDelegate <NSObject>
 - (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
 - (void)unreadCountUpdatedWithLatestNumber:(NSInteger)latestNumber;
+- (void)tokenInvalid;
 @end
 
 

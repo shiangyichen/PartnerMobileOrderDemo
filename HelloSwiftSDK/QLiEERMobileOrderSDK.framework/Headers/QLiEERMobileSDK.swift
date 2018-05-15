@@ -11,6 +11,7 @@ import Foundation
 @objc public protocol QLiEERMobileSDKDelegate: NSObjectProtocol {
     func orderWillChange(orderID:String, inAction:Int, sourceView:UIView, callback:((Bool)->()))
     func unreadCountUpdated(latestNumber: Int)
+    func tokenInvalid()
 }
 
 //@objc public class QLiEERMobileSDKConstants: NSObject {
@@ -26,6 +27,7 @@ import Foundation
     
     @objc static var delegate: QLiEERMobileSDKDelegate?
     
+    static var isCancelBtn:Bool = true
 //    @objc static public var pageSettings: [String:[String:String]]?
     
     // 這個是專門 pulling 新訂單的 controller，讓外部 SDK 可以在背景時仍 pulling 新訂單
@@ -53,6 +55,7 @@ import Foundation
     /// false: 無效，開啟行動點餐時需帶有效的access token
     /// - Returns: token是否有效
     @objc static public func checkTokenIsValid() -> Bool{
+
         if let crendential = StoreCredential(){
             return crendential.checkIsValidToken()
         }else{
@@ -61,11 +64,13 @@ import Foundation
     }
     
     @objc static public func launchMobileViewController(accessToken: String?,
+                                                        withCancelBtn: Bool,
                                                   mobileSDKDelegate: QLiEERMobileSDKDelegate,
                                                   completion:@escaping ((Int, UIViewController?)->())){
         let mobileStoryboard = UIStoryboard (name: "MobileOrder", bundle: Bundle(for: MobileOrderSplitViewController.self))
         let vc = mobileStoryboard.instantiateInitialViewController() as! MobileOrderSplitViewController
         self.delegate = mobileSDKDelegate
+        self.isCancelBtn = withCancelBtn
         if let token = accessToken{
             loginWithAccessToken(token, completion:{ result in
                 if result == 0{
