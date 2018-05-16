@@ -83,7 +83,7 @@ import Foundation
             if checkTokenIsValid(){
                 completion(LoginAccessTokenErrorType.success.rawValue, vc)
             }else{
-                completion(LoginAccessTokenErrorType.tokenError.rawValue, vc)
+                completion(LoginAccessTokenErrorType.tokenError.rawValue, nil)
             }
         }
     }

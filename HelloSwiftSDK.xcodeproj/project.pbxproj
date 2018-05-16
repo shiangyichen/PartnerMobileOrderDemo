@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1F221820AAAFF500A9A1E0 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221720AAAFF500A9A1E0 /* Reachability.framework */; };
+		3C1F222020AAB01500A9A1E0 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221920AAB01400A9A1E0 /* Alamofire.framework */; };
+		3C1F222120AAB01500A9A1E0 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221A20AAB01500A9A1E0 /* RealmSwift.framework */; };
+		3C1F222220AAB01500A9A1E0 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221B20AAB01500A9A1E0 /* SwiftyJSON.framework */; };
+		3C1F222320AAB01500A9A1E0 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221C20AAB01500A9A1E0 /* ObjectMapper.framework */; };
+		3C1F222420AAB01500A9A1E0 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221D20AAB01500A9A1E0 /* Realm.framework */; };
+		3C1F222520AAB01500A9A1E0 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221E20AAB01500A9A1E0 /* Valet.framework */; };
+		3C1F222620AAB01500A9A1E0 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1F221F20AAB01500A9A1E0 /* PKHUD.framework */; };
+		3C1F222720AAB2DF00A9A1E0 /* Alamofire.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221920AAB01400A9A1E0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222820AAB2DF00A9A1E0 /* ObjectMapper.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221C20AAB01500A9A1E0 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222920AAB2DF00A9A1E0 /* PKHUD.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221F20AAB01500A9A1E0 /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222A20AAB2DF00A9A1E0 /* Realm.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221D20AAB01500A9A1E0 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222B20AAB2DF00A9A1E0 /* RealmSwift.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221A20AAB01500A9A1E0 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222C20AAB2DF00A9A1E0 /* SwiftyJSON.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221B20AAB01500A9A1E0 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222D20AAB2DF00A9A1E0 /* Valet.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221E20AAB01500A9A1E0 /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C1F222E20AAB2DF00A9A1E0 /* Reachability.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 3C1F221720AAAFF500A9A1E0 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		914ED3182088A20700F6C42D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 914ED3172088A20700F6C42D /* AppDelegate.m */; };
 		914ED31B2088A20700F6C42D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914ED31A2088A20700F6C42D /* ViewController.m */; };
 		914ED31E2088A20700F6C42D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 914ED31C2088A20700F6C42D /* Main.storyboard */; };
@@ -21,33 +37,8 @@
 		91A1099E208DD141003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
 		91A1099F208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
 		91A109A0208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91A109BF208DD7E0003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
 		91A109D4208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; };
 		91A109D5208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC0E208DF34A00A60765 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF7208DF2E000A60765 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC10208DF34A00A60765 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF6208DF2E000A60765 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC12208DF34A00A60765 /* PKHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBFB208DF2E000A60765 /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC14208DF34A00A60765 /* Reachability.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBFA208DF2E000A60765 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC16208DF34A00A60765 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF9208DF2E000A60765 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC18208DF34A00A60765 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF4208DF2E000A60765 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC1A208DF34A00A60765 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF8208DF2E000A60765 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC1C208DF34A00A60765 /* Valet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF5208DF2E000A60765 /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC1D208DF40900A60765 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF7208DF2E000A60765 /* Alamofire.framework */; };
-		91B2BC1E208DF40900A60765 /* Alamofire.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBF7208DF2E000A60765 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC1F208DF40900A60765 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF6208DF2E000A60765 /* ObjectMapper.framework */; };
-		91B2BC20208DF40900A60765 /* ObjectMapper.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBF6208DF2E000A60765 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC21208DF40900A60765 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBFB208DF2E000A60765 /* PKHUD.framework */; };
-		91B2BC22208DF40900A60765 /* PKHUD.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBFB208DF2E000A60765 /* PKHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC23208DF40900A60765 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBFA208DF2E000A60765 /* Reachability.framework */; };
-		91B2BC24208DF40900A60765 /* Reachability.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBFA208DF2E000A60765 /* Reachability.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC25208DF40900A60765 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF9208DF2E000A60765 /* Realm.framework */; };
-		91B2BC26208DF40900A60765 /* Realm.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBF9208DF2E000A60765 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC27208DF40900A60765 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF4208DF2E000A60765 /* RealmSwift.framework */; };
-		91B2BC28208DF40900A60765 /* RealmSwift.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBF4208DF2E000A60765 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC29208DF40900A60765 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF8208DF2E000A60765 /* SwiftyJSON.framework */; };
-		91B2BC2A208DF40900A60765 /* SwiftyJSON.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBF8208DF2E000A60765 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91B2BC2B208DF40900A60765 /* Valet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91B2BBF5208DF2E000A60765 /* Valet.framework */; };
-		91B2BC2C208DF40900A60765 /* Valet.framework in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 91B2BBF5208DF2E000A60765 /* Valet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,15 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				91B2BC1A208DF34A00A60765 /* SwiftyJSON.framework in Embed Frameworks */,
-				91B2BC16208DF34A00A60765 /* Realm.framework in Embed Frameworks */,
-				91B2BC10208DF34A00A60765 /* ObjectMapper.framework in Embed Frameworks */,
-				91B2BC18208DF34A00A60765 /* RealmSwift.framework in Embed Frameworks */,
 				91A109A0208DD145003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Frameworks */,
-				91B2BC14208DF34A00A60765 /* Reachability.framework in Embed Frameworks */,
-				91B2BC0E208DF34A00A60765 /* Alamofire.framework in Embed Frameworks */,
-				91B2BC12208DF34A00A60765 /* PKHUD.framework in Embed Frameworks */,
-				91B2BC1C208DF34A00A60765 /* Valet.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,15 +59,15 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				91B2BC2A208DF40900A60765 /* SwiftyJSON.framework in Embed Libraries */,
-				91B2BC26208DF40900A60765 /* Realm.framework in Embed Libraries */,
-				91B2BC20208DF40900A60765 /* ObjectMapper.framework in Embed Libraries */,
-				91B2BC28208DF40900A60765 /* RealmSwift.framework in Embed Libraries */,
+				3C1F222720AAB2DF00A9A1E0 /* Alamofire.framework in Embed Libraries */,
+				3C1F222820AAB2DF00A9A1E0 /* ObjectMapper.framework in Embed Libraries */,
+				3C1F222920AAB2DF00A9A1E0 /* PKHUD.framework in Embed Libraries */,
+				3C1F222A20AAB2DF00A9A1E0 /* Realm.framework in Embed Libraries */,
+				3C1F222B20AAB2DF00A9A1E0 /* RealmSwift.framework in Embed Libraries */,
+				3C1F222C20AAB2DF00A9A1E0 /* SwiftyJSON.framework in Embed Libraries */,
+				3C1F222D20AAB2DF00A9A1E0 /* Valet.framework in Embed Libraries */,
+				3C1F222E20AAB2DF00A9A1E0 /* Reachability.framework in Embed Libraries */,
 				91A109D5208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Embed Libraries */,
-				91B2BC24208DF40900A60765 /* Reachability.framework in Embed Libraries */,
-				91B2BC1E208DF40900A60765 /* Alamofire.framework in Embed Libraries */,
-				91B2BC22208DF40900A60765 /* PKHUD.framework in Embed Libraries */,
-				91B2BC2C208DF40900A60765 /* Valet.framework in Embed Libraries */,
 			);
 			name = "Embed Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +75,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C1F221720AAAFF500A9A1E0 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Reachability.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221920AAB01400A9A1E0 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221A20AAB01500A9A1E0 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/RealmSwift.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221B20AAB01500A9A1E0 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/SwiftyJSON.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221C20AAB01500A9A1E0 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/ObjectMapper.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221D20AAB01500A9A1E0 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Realm.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221E20AAB01500A9A1E0 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Valet.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/Valet.framework; sourceTree = SOURCE_ROOT; };
+		3C1F221F20AAB01500A9A1E0 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks/PKHUD.framework; sourceTree = SOURCE_ROOT; };
 		914ED3142088A20700F6C42D /* OCSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		914ED3162088A20700F6C42D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		914ED3172088A20700F6C42D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -110,14 +101,6 @@
 		91955FFE208874370076318E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91956000208874370076318E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91A1099C208DD140003FDF8C /* QLiEERMobileOrderSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QLiEERMobileOrderSDK.framework; sourceTree = "<group>"; };
-		91B2BBF4208DF2E000A60765 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		91B2BBF5208DF2E000A60765 /* Valet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Valet.framework; sourceTree = "<group>"; };
-		91B2BBF6208DF2E000A60765 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
-		91B2BBF7208DF2E000A60765 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		91B2BBF8208DF2E000A60765 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = "<group>"; };
-		91B2BBF9208DF2E000A60765 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		91B2BBFA208DF2E000A60765 /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Reachability.framework; sourceTree = "<group>"; };
-		91B2BBFB208DF2E000A60765 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PKHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,16 +117,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1F222020AAB01500A9A1E0 /* Alamofire.framework in Frameworks */,
+				3C1F222120AAB01500A9A1E0 /* RealmSwift.framework in Frameworks */,
+				3C1F222220AAB01500A9A1E0 /* SwiftyJSON.framework in Frameworks */,
+				3C1F222320AAB01500A9A1E0 /* ObjectMapper.framework in Frameworks */,
+				3C1F222420AAB01500A9A1E0 /* Realm.framework in Frameworks */,
+				3C1F222520AAB01500A9A1E0 /* Valet.framework in Frameworks */,
+				3C1F222620AAB01500A9A1E0 /* PKHUD.framework in Frameworks */,
+				3C1F221820AAAFF500A9A1E0 /* Reachability.framework in Frameworks */,
 				91A109D4208DDEE2003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */,
-				91B2BC23208DF40900A60765 /* Reachability.framework in Frameworks */,
-				91B2BC29208DF40900A60765 /* SwiftyJSON.framework in Frameworks */,
-				91B2BC2B208DF40900A60765 /* Valet.framework in Frameworks */,
-				91B2BC21208DF40900A60765 /* PKHUD.framework in Frameworks */,
-				91B2BC1D208DF40900A60765 /* Alamofire.framework in Frameworks */,
-				91B2BC25208DF40900A60765 /* Realm.framework in Frameworks */,
-				91B2BC1F208DF40900A60765 /* ObjectMapper.framework in Frameworks */,
-				91B2BC27208DF40900A60765 /* RealmSwift.framework in Frameworks */,
-				91A109BF208DD7E0003FDF8C /* QLiEERMobileOrderSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,14 +192,14 @@
 		91B2BC0C208DF30000A60765 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				91B2BBF7208DF2E000A60765 /* Alamofire.framework */,
-				91B2BBF6208DF2E000A60765 /* ObjectMapper.framework */,
-				91B2BBFB208DF2E000A60765 /* PKHUD.framework */,
-				91B2BBFA208DF2E000A60765 /* Reachability.framework */,
-				91B2BBF9208DF2E000A60765 /* Realm.framework */,
-				91B2BBF4208DF2E000A60765 /* RealmSwift.framework */,
-				91B2BBF8208DF2E000A60765 /* SwiftyJSON.framework */,
-				91B2BBF5208DF2E000A60765 /* Valet.framework */,
+				3C1F221920AAB01400A9A1E0 /* Alamofire.framework */,
+				3C1F221C20AAB01500A9A1E0 /* ObjectMapper.framework */,
+				3C1F221F20AAB01500A9A1E0 /* PKHUD.framework */,
+				3C1F221D20AAB01500A9A1E0 /* Realm.framework */,
+				3C1F221A20AAB01500A9A1E0 /* RealmSwift.framework */,
+				3C1F221B20AAB01500A9A1E0 /* SwiftyJSON.framework */,
+				3C1F221E20AAB01500A9A1E0 /* Valet.framework */,
+				3C1F221720AAAFF500A9A1E0 /* Reachability.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -550,13 +532,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C3M8X2J4Y3;
+				DEVELOPMENT_TEAM = QRP2NT8BR4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/HelloSwiftSDK",
 					"$(PROJECT_DIR)/HelloSwiftSDK/iOS",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks",
 				);
 				INFOPLIST_FILE = HelloSwiftSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -576,13 +559,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C3M8X2J4Y3;
+				DEVELOPMENT_TEAM = QRP2NT8BR4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/HelloSwiftSDK",
 					"$(PROJECT_DIR)/HelloSwiftSDK/iOS",
 					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/HelloSwiftSDK/QLiEERMobileOrderSDK.framework/Frameworks",
 				);
 				INFOPLIST_FILE = HelloSwiftSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
