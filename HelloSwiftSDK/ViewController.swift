@@ -11,14 +11,14 @@ import QLiEERMobileOrderSDK
 
 class ViewController: UIViewController, QLiEERMobileSDKDelegate {
     
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
         QLiEERMobileSDK.set(environment: .Stage)
-//        if !QLiEERMobileSDK.checkTokenIsValid() {
-        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjQzLCJleHAiOjE1MjQ0ODE0MjN9.VQhclBcLjJLGHZ0TCPenHAg16J8mPcpzHpPA6jrjhnM", withCancelBtn: true, mobileSDKDelegate: self, completion: { result, vc in
+        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiMzVhYzllYzAtZWEwOS0xMWU3LThjNjAtM2I1MjZiZGJhYWQ5IiwiaWF0IjoxNTMyMDU2NzAwLCJleHAiOjE1MzIwNTY4ODB9.iF6OjwWnkICNUGuVyicBDtUQSe-LJiTfs4lCPtmY3LA", withCancelBtn: true, mobileSDKDelegate: self, completion: { result, vc in
                 // 結果為0代表正常
                 if result == 0 {
                     QLiEERMobileSDK.start()
@@ -27,11 +27,16 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
                     print("登入有誤")
                 }
             })
-//        }
     }
     
     func orderWillChange(orderID: String, inAction: Int, sourceView: UIView, callback: ((Bool) -> ())) {
         //如果要允許 order 可以操作變化，請送：
+        callback(true)
+    }
+    
+    func orderWillArchive(orderId: String, sourceView: UIView, callback: ((Bool) -> ())) {
+       
+        //如果要允許 order 可以封存，請送：
         callback(true)
     }
     
