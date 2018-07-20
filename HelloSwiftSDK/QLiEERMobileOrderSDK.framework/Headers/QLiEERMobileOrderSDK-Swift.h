@@ -258,10 +258,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger unreadCount;)
 
 SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 @protocol QLiEERMobileSDKDelegate <NSObject>
+/// 訂單狀態是否可改變callback
+/// \param orderID 訂單ID
+///
+/// \param inAction 訂單狀態
+///
+/// \param sourceView 觸發的button
+///
+/// \param callback 是否可更改狀態(true/false)
+///
 - (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
+/// 訂單狀態是否可封存callback
+/// \param orderId 訂單ID
+///
+/// \param sourceView 觸發的button
+///
+/// \param callback 是否可更改狀態(true/false)
+///
+- (void)orderWillArchiveWithOrderId:(NSString * _Nonnull)orderId sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
+/// 未讀數更新
+/// \param latestNumber 最新未讀數
+///
 - (void)unreadCountUpdatedWithLatestNumber:(NSInteger)latestNumber;
+/// 通知token失效，使用者須重新塞入正確的token重啟頁面
 - (void)tokenInvalid;
 @end
+
+
 
 
 

@@ -9,27 +9,42 @@
 import Foundation
 
 @objc public protocol QLiEERMobileSDKDelegate: NSObjectProtocol {
+    
+    /// 訂單狀態是否可改變callback
+    ///
+    /// - Parameters:
+    ///   - orderID: 訂單ID
+    ///   - inAction: 訂單狀態
+    ///   - sourceView: 觸發的button
+    ///   - callback: 是否可更改狀態(true/false)
     func orderWillChange(orderID:String, inAction:Int, sourceView:UIView, callback:((Bool)->()))
+    
+    
+    /// 訂單狀態是否可封存callback
+    ///
+    /// - Parameters:
+    ///   - orderId: 訂單ID
+    ///   - sourceView: 觸發的button
+    ///   - callback: 是否可更改狀態(true/false)
+    func orderWillArchive(orderId: String, sourceView:UIView, callback:((Bool)->()))
+    
+    
+    /// 未讀數更新
+    ///
+    /// - Parameter latestNumber: 最新未讀數
     func unreadCountUpdated(latestNumber: Int)
+    
+    
+    /// 通知token失效，使用者須重新塞入正確的token重啟頁面
     func tokenInvalid()
 }
-
-//@objc public class QLiEERMobileSDKConstants: NSObject {
-//    @objc public static let kPageNew = "kPageNew"
-//    @objc public static let kPageDoing = "kPageDoing"
-//    @objc public static let kPageAwait = "kPageAwait"
-//    @objc public static let kPageCompletion = "kPageCompletion"
-//    @objc public static let kTitleKey = "kTitleKey"
-//    @objc public static let kDateKey = "kDateKey"
-//}
 
 @objc public class QLiEERMobileSDK: NSObject{
     
     @objc static var delegate: QLiEERMobileSDKDelegate?
     
     static var isCancelBtn:Bool = true
-//    @objc static public var pageSettings: [String:[String:String]]?
-    
+
     // 這個是專門 pulling 新訂單的 controller，讓外部 SDK 可以在背景時仍 pulling 新訂單
     static internal let backgroundPreorderController = PreOrderController(status: .new)
     
