@@ -222,6 +222,7 @@ SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK20CAPSPageMenuDelegate_")
 typedef SWIFT_ENUM(NSInteger, Environment) {
   EnvironmentStage = 0,
   EnvironmentProduction = 1,
+  EnvironmentDev = 2,
 };
 
 
