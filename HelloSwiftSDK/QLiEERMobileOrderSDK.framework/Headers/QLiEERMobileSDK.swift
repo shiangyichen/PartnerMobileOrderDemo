@@ -39,11 +39,18 @@ import Foundation
     func tokenInvalid()
 }
 
+@objc public enum OrderSortType: Int {
+    case CreateTime
+    case ReservationTime
+}
+
 @objc public class QLiEERMobileSDK: NSObject{
     
     @objc static var delegate: QLiEERMobileSDKDelegate?
     
     static var isCancelBtn:Bool = true
+    
+    static var orderSortType:OrderSortType = OrderSortType.CreateTime
 
     // 這個是專門 pulling 新訂單的 controller，讓外部 SDK 可以在背景時仍 pulling 新訂單
     static internal let backgroundPreorderController = PreOrderController(status: .new)
@@ -80,12 +87,14 @@ import Foundation
     
     @objc static public func launchMobileViewController(accessToken: String?,
                                                         withCancelBtn: Bool,
+                                                        orderSortType: OrderSortType = OrderSortType.CreateTime,
                                                   mobileSDKDelegate: QLiEERMobileSDKDelegate,
                                                   completion:@escaping ((Int, UIViewController?)->())){
         let mobileStoryboard = UIStoryboard (name: "MobileOrder", bundle: Bundle(for: MobileOrderSplitViewController.self))
         let vc = mobileStoryboard.instantiateInitialViewController() as! MobileOrderSplitViewController
         self.delegate = mobileSDKDelegate
         self.isCancelBtn = withCancelBtn
+        self.orderSortType = orderSortType
         if let token = accessToken{
             loginWithAccessToken(token, completion:{ result in
                 if result == 0{

@@ -18,7 +18,10 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         QLiEERMobileSDK.set(environment: .Stage)
-        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiMzVhYzllYzAtZWEwOS0xMWU3LThjNjAtM2I1MjZiZGJhYWQ5IiwiaWF0IjoxNTMyMDU2NzAwLCJleHAiOjE1MzIwNTY4ODB9.iF6OjwWnkICNUGuVyicBDtUQSe-LJiTfs4lCPtmY3LA", withCancelBtn: true, mobileSDKDelegate: self, completion: { result, vc in
+        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiMzVhYzllYzAtZWEwOS0xMWU3LThjNjAtM2I1MjZiZGJhYWQ5IiwiaWF0IjoxNTM4MzkxMjA1LCJleHAiOjE1MzgzOTEzODV9.gl0uTv6mIHxc0-gWkhwraRl_YLF3wN42VFIY0xDs_CE",
+                                                   withCancelBtn: true,
+                                                   orderSortType: OrderSortType.ReservationTime,
+                                                   mobileSDKDelegate: self, completion: { result, vc in
                 // 結果為0代表正常
                 if result == 0 {
                     QLiEERMobileSDK.start()

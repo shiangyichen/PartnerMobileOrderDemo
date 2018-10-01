@@ -231,6 +231,11 @@ typedef SWIFT_ENUM(NSInteger, Environment, closed) {
 
 
 
+typedef SWIFT_ENUM(NSInteger, OrderSortType, closed) {
+  OrderSortTypeCreateTime = 0,
+  OrderSortTypeReservationTime = 1,
+};
+
 @protocol QLiEERMobileSDKDelegate;
 
 SWIFT_CLASS("_TtC20QLiEERMobileOrderSDK15QLiEERMobileSDK")
@@ -251,7 +256,7 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class) NSInteger unreadCount;)
 /// returns:
 /// token是否有效
 + (BOOL)checkTokenIsValid SWIFT_WARN_UNUSED_RESULT;
-+ (void)launchMobileViewControllerWithAccessToken:(NSString * _Nullable)accessToken withCancelBtn:(BOOL)withCancelBtn mobileSDKDelegate:(id <QLiEERMobileSDKDelegate> _Nonnull)mobileSDKDelegate completion:(void (^ _Nonnull)(NSInteger, UIViewController * _Nullable))completion;
++ (void)launchMobileViewControllerWithAccessToken:(NSString * _Nullable)accessToken withCancelBtn:(BOOL)withCancelBtn orderSortType:(enum OrderSortType)orderSortType mobileSDKDelegate:(id <QLiEERMobileSDKDelegate> _Nonnull)mobileSDKDelegate completion:(void (^ _Nonnull)(NSInteger, UIViewController * _Nullable))completion;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
