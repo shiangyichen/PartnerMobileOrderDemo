@@ -18,7 +18,7 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         QLiEERMobileSDK.set(environment: .Stage)
-        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiMzVhYzllYzAtZWEwOS0xMWU3LThjNjAtM2I1MjZiZGJhYWQ5IiwiaWF0IjoxNTM4MzkxMjA1LCJleHAiOjE1MzgzOTEzODV9.gl0uTv6mIHxc0-gWkhwraRl_YLF3wN42VFIY0xDs_CE",
+        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiMzVhYzllYzAtZWEwOS0xMWU3LThjNjAtM2I1MjZiZGJhYWQ5IiwiaWF0IjoxNTQ1ODk0ODQ2LCJleHAiOjE1NDU4OTUwMjZ9.Y_4ImLH7s0I5189Mx7Yz67B-pDRJnDluRjH63BHPVo8", deviceToken: "", pushType: .inline,
                                                    withCancelBtn: true,
                                                    orderSortType: OrderSortType.ReservationTime,
                                                    mobileSDKDelegate: self, completion: { result, vc in

@@ -44,6 +44,18 @@ import Foundation
     case ReservationTime
 }
 
+@objc public enum PushType: Int{
+    case qlieer
+    case inline
+    
+    func name() -> String {
+        switch self {
+        case .qlieer: return "qlieer"
+        case .inline: return "inline"
+        }
+    }
+}
+
 @objc public class QLiEERMobileSDK: NSObject{
     
     @objc static var delegate: QLiEERMobileSDKDelegate?
@@ -86,6 +98,8 @@ import Foundation
     }
     
     @objc static public func launchMobileViewController(accessToken: String?,
+                                                        deviceToken: String,
+                                                        pushType: PushType,
                                                         withCancelBtn: Bool,
                                                         orderSortType: OrderSortType = OrderSortType.CreateTime,
                                                   mobileSDKDelegate: QLiEERMobileSDKDelegate,
@@ -96,7 +110,7 @@ import Foundation
         self.isCancelBtn = withCancelBtn
         self.orderSortType = orderSortType
         if let token = accessToken{
-            loginWithAccessToken(token, completion:{ result in
+            loginWithAccessToken(token, deviceToken: deviceToken, pushType: pushType, completion:{ result in
                 if result == 0{
                     completion(result, vc)
                 }else{
@@ -117,8 +131,8 @@ import Foundation
     /// - Parameters:
     ///   - accessToken: accessToken
     ///   - completion: 登入完成callBack
-    static private func loginWithAccessToken(_ accessToken:String, completion:@escaping ((Int)->())){
-        LoginManager.share.loginWithAccessToken(accessToken, completion: { result in
+    static private func loginWithAccessToken(_ accessToken:String,  deviceToken: String, pushType: PushType, completion:@escaping ((Int)->())){
+        LoginManager.share.loginWithAccessToken(accessToken, deviceToken: deviceToken, pushType: pushType, completion: { result in
             completion(result.rawValue)
         })
     }
