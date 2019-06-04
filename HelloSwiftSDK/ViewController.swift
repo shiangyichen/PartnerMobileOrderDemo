@@ -18,7 +18,7 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         QLiEERMobileSDK.set(environment: .Stage)
-        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiMzVhYzllYzAtZWEwOS0xMWU3LThjNjAtM2I1MjZiZGJhYWQ5IiwiaWF0IjoxNTQ1ODk0ODQ2LCJleHAiOjE1NDU4OTUwMjZ9.Y_4ImLH7s0I5189Mx7Yz67B-pDRJnDluRjH63BHPVo8", deviceToken: "", pushType: .inline,
+        QLiEERMobileSDK.launchMobileViewController(accessToken: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiY2I4NmUzOTEtODBhZi00ZGQ2LTg4ODctYzg1ZjNmYTg4ZTg0IiwiaWF0IjoxNTU5NTQ4MDk4LCJleHAiOjE1NTk1NDgyNzh9.UoPKj18Rl3svjXzy7bbqjkqEK7oljcXx3Uzv98OgFok", deviceToken: "", pushType: .inline,
                                                    withCancelBtn: true,
                                                    orderSortType: OrderSortType.ReservationTime,
                                                    mobileSDKDelegate: self, completion: { result, vc in
@@ -50,6 +50,22 @@ class ViewController: UIViewController, QLiEERMobileSDKDelegate {
     
     func tokenInvalid() {
         // token失效後，需重新launch並塞入新的token
+        let accessToken =  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiY2I4NmUzOTEtODBhZi00ZGQ2LTg4ODctYzg1ZjNmYTg4ZTg0IiwiaWF0IjoxNTU5NTQ4MDk4LCJleHAiOjE1NTk1NDgyNzh9.UoPKj18Rl3svjXzy7bbqjkqEK7oljcXx3Uzv98OgFok"
+        let deviceToken = UserDefaults.standard.object(forKey: "deviceToken") as? String ?? ""
+        QLiEERMobileSDK.launchMobileViewController(accessToken: accessToken,
+                                                   deviceToken: deviceToken,
+                                                   pushType: .inline,
+                                                   withCancelBtn: true,
+                                                   orderSortType: OrderSortType.CreateTime,
+                                                   mobileSDKDelegate: self,
+                                                   completion: { result, vc in
+                                                    if result == 0 {
+                                                        QLiEERMobileSDK.start()
+                                                        self.present(vc!, animated: true, completion: nil)
+                                                    }else{
+                                                        print("登入有誤")
+                                                    }
+        })
     }
     
     override func didReceiveMemoryWarning() {
