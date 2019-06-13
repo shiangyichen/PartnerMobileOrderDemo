@@ -17,7 +17,7 @@ import Foundation
     ///   - inAction: 訂單狀態
     ///   - sourceView: 觸發的button
     ///   - callback: 是否可更改狀態(true/false)
-    func orderWillChange(orderID:String, inAction:Int, sourceView:UIView, callback:((Bool)->()))
+    func orderWillChange(orderID:String, inAction:Int, sourceView:UIView, callback:@escaping ((Bool)->()))
     
     
     /// 訂單狀態是否可封存callback
@@ -26,7 +26,7 @@ import Foundation
     ///   - orderId: 訂單ID
     ///   - sourceView: 觸發的button
     ///   - callback: 是否可更改狀態(true/false)
-    func orderWillArchive(orderId: String, sourceView:UIView, callback:((Bool)->()))
+    func orderWillArchive(orderId: String, sourceView:UIView, callback:@escaping ((Bool)->()))
     
     
     /// 未讀數更新

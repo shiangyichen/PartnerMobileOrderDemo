@@ -286,7 +286,7 @@ SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 ///
 /// \param callback 是否可更改狀態(true/false)
 ///
-- (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
+- (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(void (^ _Nonnull)(BOOL))callback;
 /// 訂單狀態是否可封存callback
 /// \param orderId 訂單ID
 ///
@@ -294,7 +294,7 @@ SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 ///
 /// \param callback 是否可更改狀態(true/false)
 ///
-- (void)orderWillArchiveWithOrderId:(NSString * _Nonnull)orderId sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
+- (void)orderWillArchiveWithOrderId:(NSString * _Nonnull)orderId sourceView:(UIView * _Nonnull)sourceView callback:(void (^ _Nonnull)(BOOL))callback;
 /// 未讀數更新
 /// \param latestNumber 最新未讀數
 ///
@@ -605,7 +605,7 @@ SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 ///
 /// \param callback 是否可更改狀態(true/false)
 ///
-- (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
+- (void)orderWillChangeWithOrderID:(NSString * _Nonnull)orderID inAction:(NSInteger)inAction sourceView:(UIView * _Nonnull)sourceView callback:(void (^ _Nonnull)(BOOL))callback;
 /// 訂單狀態是否可封存callback
 /// \param orderId 訂單ID
 ///
@@ -613,7 +613,7 @@ SWIFT_PROTOCOL("_TtP20QLiEERMobileOrderSDK23QLiEERMobileSDKDelegate_")
 ///
 /// \param callback 是否可更改狀態(true/false)
 ///
-- (void)orderWillArchiveWithOrderId:(NSString * _Nonnull)orderId sourceView:(UIView * _Nonnull)sourceView callback:(SWIFT_NOESCAPE void (^ _Nonnull)(BOOL))callback;
+- (void)orderWillArchiveWithOrderId:(NSString * _Nonnull)orderId sourceView:(UIView * _Nonnull)sourceView callback:(void (^ _Nonnull)(BOOL))callback;
 /// 未讀數更新
 /// \param latestNumber 最新未讀數
 ///
