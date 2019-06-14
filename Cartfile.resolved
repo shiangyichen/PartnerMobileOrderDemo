@@ -1,0 +1,7 @@
+github "Alamofire/Alamofire" "4.8.2"
+github "Hearst-DD/ObjectMapper" "3.5.0"
+github "Square/Valet" "3.2.5"
+github "SwiftyJSON/SwiftyJSON" "5.0.0"
+github "ashleymills/Reachability.swift" "v4.3.1"
+github "pkluz/PKHUD" "5.3.0"
+github "realm/realm-cocoa" "v3.16.1"
