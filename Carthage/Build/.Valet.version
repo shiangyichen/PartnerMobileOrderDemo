@@ -1,0 +1,10 @@
+{
+  "commitish" : "3.2.7",
+  "iOS" : [
+    {
+      "name" : "Valet",
+      "hash" : "cda82c7b800f863f7b6042667038fb58bb9ce6c182731a46b10d7f2ef1fcaef8",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}

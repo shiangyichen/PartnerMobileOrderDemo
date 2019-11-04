@@ -17,7 +17,7 @@ import Foundation
     ///   - inAction: 訂單狀態
     ///   - sourceView: 觸發的button
     ///   - callback: 是否可更改狀態(true/false)
-    func orderWillChange(orderID:String, inAction:Int, sourceView:UIView, callback:((Bool)->()))
+    func orderWillChange(orderID:String, inAction:Int, sourceView:UIView, callback:@escaping ((Bool)->()))
     
     
     /// 訂單狀態是否可封存callback
@@ -26,7 +26,7 @@ import Foundation
     ///   - orderId: 訂單ID
     ///   - sourceView: 觸發的button
     ///   - callback: 是否可更改狀態(true/false)
-    func orderWillArchive(orderId: String, sourceView:UIView, callback:((Bool)->()))
+    func orderWillArchive(orderId: String, sourceView:UIView, callback:@escaping ((Bool)->()))
     
     
     /// 未讀數更新
@@ -39,11 +39,30 @@ import Foundation
     func tokenInvalid()
 }
 
+@objc public enum OrderSortType: Int {
+    case CreateTime
+    case ReservationTime
+}
+
+@objc public enum PushType: Int{
+    case qlieer
+    case inline
+    
+    func name() -> String {
+        switch self {
+        case .qlieer: return "qlieer"
+        case .inline: return "inline"
+        }
+    }
+}
+
 @objc public class QLiEERMobileSDK: NSObject{
     
     @objc static var delegate: QLiEERMobileSDKDelegate?
     
     static var isCancelBtn:Bool = true
+    
+    static var orderSortType:OrderSortType = OrderSortType.CreateTime
 
     // 這個是專門 pulling 新訂單的 controller，讓外部 SDK 可以在背景時仍 pulling 新訂單
     static internal let backgroundPreorderController = PreOrderController(status: .new)
@@ -79,15 +98,19 @@ import Foundation
     }
     
     @objc static public func launchMobileViewController(accessToken: String?,
+                                                        deviceToken: String,
+                                                        pushType: PushType,
                                                         withCancelBtn: Bool,
+                                                        orderSortType: OrderSortType = OrderSortType.CreateTime,
                                                   mobileSDKDelegate: QLiEERMobileSDKDelegate,
                                                   completion:@escaping ((Int, UIViewController?)->())){
         let mobileStoryboard = UIStoryboard (name: "MobileOrder", bundle: Bundle(for: MobileOrderSplitViewController.self))
         let vc = mobileStoryboard.instantiateInitialViewController() as! MobileOrderSplitViewController
         self.delegate = mobileSDKDelegate
         self.isCancelBtn = withCancelBtn
+        self.orderSortType = orderSortType
         if let token = accessToken{
-            loginWithAccessToken(token, completion:{ result in
+            loginWithAccessToken(token, deviceToken: deviceToken, pushType: pushType, completion:{ result in
                 if result == 0{
                     completion(result, vc)
                 }else{
@@ -108,8 +131,8 @@ import Foundation
     /// - Parameters:
     ///   - accessToken: accessToken
     ///   - completion: 登入完成callBack
-    static private func loginWithAccessToken(_ accessToken:String, completion:@escaping ((Int)->())){
-        LoginManager.share.loginWithAccessToken(accessToken, completion: { result in
+    static private func loginWithAccessToken(_ accessToken:String,  deviceToken: String, pushType: PushType, completion:@escaping ((Int)->())){
+        LoginManager.share.loginWithAccessToken(accessToken, deviceToken: deviceToken, pushType: pushType, completion: { result in
             completion(result.rawValue)
         })
     }
