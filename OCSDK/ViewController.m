@@ -25,7 +25,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [QLiEERMobileSDK setWithEnvironment:EnvironmentStage];
     if (![QLiEERMobileSDK checkTokenIsValid]) {
-        [QLiEERMobileSDK launchMobileViewControllerWithAccessToken:@"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiNjk0NTY0NDAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwidXNlcklkIjoiNjk3YjhmNzAtM2QzMC0xMWU4LTg1ZmQtODM4MTJkZTEzYmM4IiwiaWF0IjoxNTI0NDgxMjg2LCJleHAiOjE1MjQ0ODE0NjZ9.hMzRqIEjmajAZvU3nE7g2dTyGtQrygSnYvi4ok4a140" mobileSDKDelegate:self completion:^(NSInteger result, UIViewController * _Nullable vc) {
+        [QLiEERMobileSDK launchMobileViewControllerWithAccessToken:@"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdG9yZUlkIjoiODFkNDliOTAtOTY5NC0xMWU3LTg0NmItMWYzZTliYmM4MWMxIiwidXNlcklkIjoiZjQwMWEzNjAtYTIzMy0xMWU4LThhNDItYmIxOTY4ODNlMDIyIiwiaWF0IjoxNTU5Nzg5ODE3LCJleHAiOjE1NTk3ODk5OTd9.PdKI_07XEO3Cd6ruGvupTCHyilcl11jKAyihu_W5TT8" mobileSDKDelegate:self completion:^(NSInteger result, UIViewController * _Nullable vc) {
             // 結果為0代表正常
             if (result == 0) {
                 [QLiEERMobileSDK start];
